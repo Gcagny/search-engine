@@ -1,0 +1,26 @@
+{
+  "identity": "search",
+  "connection": "",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "server" : {
+      "type": "string"
+    },
+    "attributes": {
+      "type":"array"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "searches"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}

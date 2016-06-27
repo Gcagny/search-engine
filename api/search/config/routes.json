@@ -1,0 +1,64 @@
+{
+  "routes": {
+    "GET /search": {
+      "controller": "Search",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /search/:id": {
+      "controller": "Search",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /search/:id/:api/:keywords": {
+      "controller": "Search",
+      "action": "requestDistantApi",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /search": {
+      "controller": "Search",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /search/:id": {
+      "controller": "Search",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /search/:id": {
+      "controller": "Search",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /search/:parentId/:relation": {
+      "controller": "Search",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /search/:parentId/:relation/:id": {
+      "controller": "Search",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}
