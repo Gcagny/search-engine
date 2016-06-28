@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port": process.env.PORT,
+  "port": "{{= process.env.PORT || 2000}}",
   "frontendUrl": "",
   "reload": {
     "timeout": 1000,
