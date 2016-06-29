@@ -45430,12 +45430,9 @@
 
 		app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
-			$routeProvider.when('/local', {
+			$routeProvider.when('/', {
 				templateUrl: 'views/home.html',
 				controller: 'HomeCtrl'
-			}).when('/mixte', {
-				templateUrl: 'views/home.html',
-				controller: 'MixteCtrl'
 			}).otherwise({ redirectTo: '/' });
 
 			$locationProvider.hashPrefix('!');
