@@ -1,0 +1,328 @@
+{
+  "data": {
+    "email": [],
+    "search": [
+      {
+        "server": "http://localhost:1337/api",
+        "attributes": [
+          {
+            "name": "number"
+          },
+          {
+            "name": "text"
+          },
+          {
+            "name": "tips",
+            "child": {
+              "name": "s"
+            }
+          },
+          {
+            "name": "tips",
+            "child": {
+              "name": "ps"
+            }
+          },
+          {
+            "name": "tips",
+            "child": {
+              "name": "ns"
+            }
+          },
+          {
+            "name": "tips",
+            "child": {
+              "name": "so"
+            }
+          },
+          {
+            "name": "testing"
+          },
+          {
+            "name": "ccp"
+          },
+          {
+            "name": "md"
+          }
+        ],
+        "updatedBy": null,
+        "id": 1,
+        "createdAt": "2016-06-17T08:27:54.423Z",
+        "updatedAt": "2016-06-17T08:35:42.679Z"
+      },
+      {
+        "attributes": [
+          {
+            "name": "title"
+          },
+          {
+            "name": "content"
+          }
+        ],
+        "server": "http://localhost:1337",
+        "createdAt": "2016-06-28T13:56:47.631Z",
+        "updatedAt": "2016-06-28T14:02:53.566Z",
+        "id": 2,
+        "updatedBy": null
+      }
+    ],
+    "upload": [],
+    "user": [
+      {
+        "username": "cagny",
+        "email": "cagny@truc.fr",
+        "lang": "en_US",
+        "template": "default",
+        "id_ref": "1",
+        "provider": "local",
+        "password": "$2a$10$AjIb9cbqCpJtHia2Bu0JNu8JcC2tfUN9Q4oizQJe8LxeWMZQPX8xK",
+        "id": 1,
+        "createdAt": "2016-06-15T08:53:14.818Z",
+        "updatedAt": "2016-06-15T08:53:14.831Z"
+      }
+    ],
+    "search_contributors__user_searches": [],
+    "role_users__user_roles": [
+      {
+        "role_users": 1,
+        "user_roles": 1,
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "email": {
+      "from": {
+        "type": "string"
+      },
+      "to": {
+        "type": "string"
+      },
+      "subject": {
+        "type": "string"
+      },
+      "html": {
+        "type": "string"
+      },
+      "text": {
+        "type": "string"
+      },
+      "sent": {
+        "type": "boolean"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "search": {
+      "server": {
+        "type": "string"
+      },
+      "attributes": {
+        "type": "array"
+      },
+      "createdBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "createdBy"
+      },
+      "updatedBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "updatedBy"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "upload": {
+      "readable": {
+        "type": "boolean"
+      },
+      "domain": {
+        "type": "boolean"
+      },
+      "truncated": {
+        "type": "boolean"
+      },
+      "fieldname": {
+        "type": "string"
+      },
+      "filename": {
+        "type": "string"
+      },
+      "encoding": {
+        "type": "string"
+      },
+      "transferEncoding": {
+        "type": "string"
+      },
+      "mime": {
+        "type": "string"
+      },
+      "mimeType": {
+        "type": "string"
+      },
+      "originalFilenameFormatted": {
+        "type": "string"
+      },
+      "originalFilename": {
+        "type": "string"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "createdBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "createdBy"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "resetPasswordToken": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "search_contributors__user_searches": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "search_contributors": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "search",
+        "on": "id",
+        "via": "user_searches"
+      },
+      "user_searches": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "search_contributors"
+      }
+    },
+    "role_users__user_roles": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "role_users": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "role",
+        "on": "id",
+        "via": "user_roles"
+      },
+      "user_roles": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "role_users"
+      }
+    }
+  },
+  "counters": {
+    "email": {},
+    "search": {
+      "id": 2
+    },
+    "upload": {},
+    "user": {
+      "id": 1
+    },
+    "search_contributors__user_searches": {},
+    "role_users__user_roles": {
+      "id": 1
+    }
+  }
+}
