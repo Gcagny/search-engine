@@ -64,6 +64,7 @@ module.exports = {
             }
             else{
               console.log("erreur : "+error);
+              console.log("resonse : "+response.statusCode);
               reject(error);
             }
           }
