@@ -6,50 +6,13 @@
         "server": "https://search-engine-post.herokuapp.com/",
         "attributes": [
           {
-            "name": "number"
+            "name": "title"
           },
           {
-            "name": "text"
-          },
-          {
-            "name": "tips",
-            "child": {
-              "name": "s"
-            }
-          },
-          {
-            "name": "tips",
-            "child": {
-              "name": "ps"
-            }
-          },
-          {
-            "name": "tips",
-            "child": {
-              "name": "ns"
-            }
-          },
-          {
-            "name": "tips",
-            "child": {
-              "name": "so"
-            }
-          },
-          {
-            "name": "testing"
-          },
-          {
-            "name": "ccp"
-          },
-          {
-            "name": "md"
+            "name": "content"
           }
-        ],
-        "updatedBy": null,
-        "id": 1,
-        "createdAt": "2016-06-17T08:27:54.423Z",
-        "updatedAt": "2016-06-17T08:35:42.679Z"
       },
+
       {
         "server": "http://localhost:1337",
         "attributes": [

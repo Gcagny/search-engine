@@ -64,7 +64,7 @@ module.exports = {
             }
             else{
               console.log("erreur : "+error);
-              console.log("resonse : "+response.statusCode);
+              console.log("response : "+response.statusCode);
               reject(error);
             }
           }
@@ -77,6 +77,8 @@ module.exports = {
     try {
       var res;
       let search = yield Search.findOne({id:this.params.id});
+      console.log("search.server : "+search.server);
+      console.log("this.params.api : "+this.params.api);
       yield getApiRes(search.server+'/'+this.params.api, this.params.keywords, search.attributes)
       .then(function(data){
         res = data;
