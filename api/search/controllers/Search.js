@@ -77,9 +77,11 @@ module.exports = {
     try {
       var res;
       let search = yield Search.findOne({id:this.params.id});
-      console.log("search.server : "+search.server);
-      console.log("this.params.api : "+this.params.api);
-      yield getApiRes(search.server+'/'+this.params.api, this.params.keywords, search.attributes)
+      if(search.server[search.server.length-1] != "/")
+      {
+        search.server = search.server+"/";
+      }
+      yield getApiRes(search.server+this.params.api, this.params.keywords, search.attributes)
       .then(function(data){
         res = data;
       });
