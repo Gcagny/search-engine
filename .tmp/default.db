@@ -3,7 +3,7 @@
     "email": [],
     "search": [
       {
-        "server": "http://localhost:1337/api",
+        "server": "https://search-engine-post.herokuapp.com/",
         "attributes": [
           {
             "name": "number"
