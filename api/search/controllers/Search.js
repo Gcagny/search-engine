@@ -63,7 +63,7 @@ module.exports = {
               resolve(JSON.stringify(resultat));
             }
             else{
-              console.log("erreur")
+              console.log("erreur : "+error);
               reject(error);
             }
           }
