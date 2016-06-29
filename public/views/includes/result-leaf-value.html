@@ -1,0 +1,7 @@
+<span ng-if="a.child === undefined">{{obj[a.name]}}</span><!--
+--><span
+  ng-if="a.child !== undefined"
+  ng-include="'/views/includes/result-leaf-value.html'"
+  ng-init=" obj = copy(obj[a.name]); a = a.child;"
+  >
+</span>

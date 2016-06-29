@@ -1,0 +1,23 @@
+<h1>Produits</h1>
+<form>
+ <input type="text" ng-model="keyword">
+ <input type="button" value="Rechercher" ng-click="search(keyword, products)">
+</form>
+
+<table>
+ <tr>
+   <th ng-repeat="a in cfg.attributes" ng-include="'/views/includes/result-leaf-label.html'">
+   </th>
+   <th> score </th>
+   <th> scoreN </th>
+ </tr>
+ <tr ng-repeat="r in result | orderBy:'-scoreN' | orderBy:'-score'">
+   <td
+     ng-repeat="a in cfg.attributes"
+     ng-init="obj = copy(r)"
+     ng-include="'/views/includes/result-leaf-value.html'">
+   </td>
+   <td> {{r.score}} </td>
+   <td> {{r.scoreN}} </td>
+ </tr>
+</table>

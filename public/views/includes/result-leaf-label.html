@@ -1,0 +1,7 @@
+<span>{{parentpath}}{{a.name}}</span><!--
+--><span
+  ng-if="a.child !== undefined"
+  ng-include="'/views/includes/result-leaf-label.html'"
+  ng-init="parentpath = '.'; a = a.child;"
+  >
+</span>
